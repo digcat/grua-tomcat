@@ -1,0 +1,7 @@
+global:
+  project: mq
+  volumepath: /var/lib/grua/volumes
+build: openjdk8
+run: false
+build: tomcat
+

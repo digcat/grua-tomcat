@@ -6,8 +6,11 @@ openjdk8:
   run: false
 tomcat:
   build: tomcat
+  tag: mq/tomcat
   options:
     - "--expose=8080"
-  volumes:
-    - config:/config
-    - data:/data
+  environment:
+    ADMIN_USER: admin
+    ADMIN_PASS: tomcat 
+  ports:
+    - "8080:8080"
